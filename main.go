@@ -84,7 +84,7 @@ func main() {
 	grid := CreateGrid()
 	for !grid.GameOver {
 		if grid.ActiveBlock == nil {
-			block := CreateBlock([]string{"T", "L", "O", "I", "J", "S"}[rand.Intn(4)], 3, 0, rand.Intn(BROWN)+1)
+			block := CreateBlock([]string{"T", "L", "O", "I", "J", "S"}[rand.Intn(6)], 3, 0, rand.Intn(BROWN)+1)
 			grid.Place(block)
 		}
 		HandleInput(grid, reset)

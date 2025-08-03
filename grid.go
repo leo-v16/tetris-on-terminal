@@ -1,5 +1,7 @@
 package main
 
+import "math"
+
 type Grid struct {
 	Layout      [HEIGHT][WIDTH]int
 	ActiveBlock *Block
@@ -35,10 +37,10 @@ func (G *Grid) Collapse() {
 			}
 		}
 		if collapse {
-			for col := range WIDTH {
-				G.Layout[row][col] = YELLOW
-				Draw(G)
-			}
+			// for col := range WIDTH {
+			// 	G.Layout[row][col] = YELLOW
+			// }
+			// Draw(G)
 			collapseRows = append(collapseRows, row)
 		}
 	}
@@ -51,7 +53,7 @@ func (G *Grid) Collapse() {
 		}
 	}
 
-	G.Score += len(collapseRows)
+	G.Score += int(math.Pow(2, float64(len(collapseRows)))) - 1
 }
 
 func (G *Grid) MoveDown() {

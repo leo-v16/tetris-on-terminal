@@ -27,8 +27,8 @@ func CreateBlock(blockType string, x, y, color int) *Block {
 		},
 		"S": {
 			{0, 1, 1},
-			{0, 1, 0},
-			{1, 0, 1},
+			{1, 1, 0},
+			{0, 0, 0},
 		},
 		"O": {
 			{0, 0, 0},

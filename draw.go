@@ -30,7 +30,7 @@ func Draw(G *Grid) {
 				builder.WriteString(BLACK_COLOR + "  ")
 			case WHITE:
 				// builder.WriteString("⬜")
-				builder.WriteString("🔲")
+				builder.WriteString("🟨")
 			case RED:
 				builder.WriteString("🟥")
 			case GREEN:
